@@ -287,7 +287,18 @@ footer {
   color: #111;
   text-decoration: underline;
 }
-
+.dummy_page_title{
+  text-align: center;
+}
+.dummy_page_flex{
+  display: flex;
+  justify-content: space-between;
+}
+.dummy_page_row{
+  margin-top: 40px;
+  text-align: justify;
+  width: 48%;
+}
 .catalog {
   position: fixed;
   z-index: 999;
@@ -1032,5 +1043,11 @@ select {
 
   .subcatalog.subopen {
     right: 0;
+  }
+  .dummy_page_flex{
+    display: block;
+  }
+  .dummy_page_row{
+    width: 100%;
   }
 }

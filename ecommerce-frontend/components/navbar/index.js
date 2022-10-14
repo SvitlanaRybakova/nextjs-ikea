@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FiMenu } from 'react-icons/fi'
@@ -16,7 +17,9 @@ export default function Navbar() {
             <FiMenu size={ICON_SIZE} />
           </button>
           <Link href="/" className="logo">
-            <Image src={logoImg} alt="IKEA logo" width={500} height={500} />
+            <a>
+              <Image src={logoImg} alt="IKEA logo" width={500} height={500} />
+            </a>
           </Link>
           {/* TODO implement search*/}
           <form className="search">
