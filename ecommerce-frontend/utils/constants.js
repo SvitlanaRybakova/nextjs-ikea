@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 
 export const ICON_SIZE = 20
-export const PARAGRAPH_IN_COLUMN = 3;
+export const PARAGRAPH_IN_COLUMN = 3
 
 export const ABOUT_US = [
   {

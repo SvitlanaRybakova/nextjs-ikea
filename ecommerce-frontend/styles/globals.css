@@ -243,15 +243,10 @@ footer {
   bottom: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   background: #fff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
   max-width: 19rem;
   min-width: 13rem;
   font-size: 0.9rem;
@@ -260,13 +255,9 @@ footer {
   word-break: break-word;
 }
 
-.offer-arrow {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  vertical-align: middle;
-  fill: currentColor;
-  margin-top: 1.875rem;
+.offer-extra a {
+  display: flex;
+  align-items: center;
 }
 
 .footer-header {
@@ -287,14 +278,14 @@ footer {
   color: #111;
   text-decoration: underline;
 }
-.dummy_page_title{
+.dummy_page_title {
   text-align: center;
 }
-.dummy_page_flex{
+.dummy_page_flex {
   display: flex;
   justify-content: space-between;
 }
-.dummy_page_row{
+.dummy_page_row {
   margin-top: 40px;
   text-align: justify;
   width: 48%;
@@ -436,7 +427,7 @@ footer {
   -ms-grid-column: 1;
   grid-column-start: 1;
   -ms-grid-column-span: 8;
-  grid-column-end: 9;
+  grid-column-end: 6;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -450,7 +441,7 @@ footer {
 
 .good-item {
   -ms-grid-column: 9;
-  grid-column-start: 9;
+  grid-column-start: 7;
   -ms-grid-column-span: 4;
   grid-column-end: 13;
   padding: 0 2.5rem;
@@ -464,11 +455,11 @@ footer {
   display: none;
 }
 
-.good-item__empty {
-  display: none;
+.good-item__count {
+  display: block;
 }
 
-.not-in-stock .good-item__empty {
+.not-in-stock .good-item__count {
   display: block;
 }
 
@@ -581,6 +572,7 @@ footer {
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.42857;
+  margin-left: 1rem;
 }
 
 .btn-add-wishlist {
@@ -886,7 +878,7 @@ select {
   padding: 0 10px;
   border: 1px solid #666;
   border-radius: 2px;
-  background: #fff url(../image/chevron-down-thin-24.1667eab2.svg) no-repeat
+  background: #fff url(../images/chevron-down-thin-24.1667eab2.svg) no-repeat
     right 8px center/1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1044,10 +1036,10 @@ select {
   .subcatalog.subopen {
     right: 0;
   }
-  .dummy_page_flex{
+  .dummy_page_flex {
     display: block;
   }
-  .dummy_page_row{
+  .dummy_page_row {
     width: 100%;
   }
 }

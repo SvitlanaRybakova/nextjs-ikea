@@ -1,0 +1,187 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "name": "SÄBÖVIK",
+        "category": "beds",
+        "subcategory": "continental-beds",
+        "price": 3445,
+        "description": "A complete bed designed to be comfortable both for sleeping and reading. It provides superior support where needed, feels soft where it goes, and is smartly packaged, so it is easy to transport.",
+        "count": 5,
+        "slug": "sabovik",
+        "createdAt": "2022-10-13T17:08:19.994Z",
+        "updatedAt": "2022-10-13T17:12:27.835Z",
+        "publishedAt": "2022-10-13T17:08:25.055Z"
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "name": "SKOTTERUD",
+        "category": "beds",
+        "subcategory": "continental-bed",
+        "price": 8989,
+        "description": "Headboard/spring base/bed mattress/bed cover\nWe want to have a positive impact on our planet. That is why we want all materials in our products to be recycled or renewable, and procured in a responsible way, by 2030 at the latest.\n\nBen\nWe want to have a positive impact on our planet. That is why we want all materials in our products to be recycled or renewable, and procured in a responsible way, by 2030 at the latest.\n\nBy using a renewable material like wood in this product, we avoid fossil or finite materials.",
+        "count": 2,
+        "slug": "skotterud",
+        "createdAt": "2022-10-13T17:12:12.163Z",
+        "updatedAt": "2022-10-13T17:12:14.287Z",
+        "publishedAt": "2022-10-13T17:12:14.284Z"
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "name": "KONGSFJORD",
+        "category": "beds",
+        "subcategory": "continental-bed",
+        "price": 27910,
+        "description": "Velvet covered from head to toe. From the quilted headboard with fabric-covered buttons to the supple spring mattress that relaxes every muscle. A pure pleasure for both body and soul.",
+        "count": 7,
+        "slug": "kongsfjord",
+        "createdAt": "2022-10-13T17:14:40.181Z",
+        "updatedAt": "2022-10-13T17:14:42.805Z",
+        "publishedAt": "2022-10-13T17:14:42.803Z"
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "name": "FRIHETEN",
+        "category": "beds",
+        "subcategory": "sofa-bed",
+        "price": 5789,
+        "description": "After a good night's sleep, you can easily turn your bedroom or guest room into a living room again. The built-in storage space is easy to access and has space for bedding, books and pyjamas.",
+        "count": 5,
+        "slug": "friheten",
+        "createdAt": "2022-10-13T17:16:59.912Z",
+        "updatedAt": "2022-10-13T17:17:01.309Z",
+        "publishedAt": "2022-10-13T17:17:01.307Z"
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "name": "VIMLE",
+        "category": "beds",
+        "subcategory": "sofa-bed",
+        "price": 10300,
+        "description": "The VIMLE sofa series has sections that can be combined as you wish to create a tailor-made solution for you and your home. This variant has a sofa bed that is super easy to spread out with a thick, lovely mattress.",
+        "count": 1,
+        "slug": "vimle",
+        "createdAt": "2022-10-13T17:18:12.628Z",
+        "updatedAt": "2022-10-13T17:18:13.664Z",
+        "publishedAt": "2022-10-13T17:18:13.662Z"
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "name": "HUVUDSPELARE",
+        "category": "chairs",
+        "subcategory": "chair-for-gaming",
+        "price": 799,
+        "description": "Adjust the height and angle so that you sit really comfortably - and let the game begin. The backrest gives you good support for the lower back - and even if the game heats up, you can stay cool thanks to the mesh.",
+        "count": 19,
+        "slug": "huvudspelare",
+        "createdAt": "2022-10-13T17:22:48.807Z",
+        "updatedAt": "2022-10-13T17:22:50.731Z",
+        "publishedAt": "2022-10-13T17:22:50.728Z"
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "name": "UTESPELARE",
+        "category": "chairs",
+        "subcategory": "chair-for-gaming",
+        "price": 1495,
+        "description": "The UTESPELARE gaming chair gives your body nice support with synchronized back and seat tilt that follows your movements precisely throughout the match. And after the game, you can sit back and recharge.",
+        "count": 5,
+        "slug": "utespelare",
+        "createdAt": "2022-10-13T17:24:37.597Z",
+        "updatedAt": "2022-10-13T17:30:37.309Z",
+        "publishedAt": "2022-10-13T17:30:37.306Z"
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "name": "GRUPPSPEL",
+        "category": "chairs",
+        "subcategory": "chair-for-gaming",
+        "price": 3995,
+        "description": "Cool gaming chair in durable black leather. Equipped with many smart functions that allow you to adjust the back, seat, tilt, swing, and arm and headrest to sit really comfortably.",
+        "count": 26,
+        "slug": "gruppspel",
+        "createdAt": "2022-10-13T17:26:08.031Z",
+        "updatedAt": "2022-10-13T17:26:08.919Z",
+        "publishedAt": "2022-10-13T17:26:08.917Z"
+      }
+    },
+    {
+      "id": 9,
+      "attributes": {
+        "name": "MAMMUT",
+        "category": "chairs",
+        "subcategory": "children's-chair",
+        "price": 156,
+        "description": "The MAMMUT series consists of robust and light children's furniture that withstands weather, wind and tough imaginative play. Perfect to wear outdoors and easy to wash off when it's time to move in.",
+        "count": 99,
+        "slug": "mammut",
+        "createdAt": "2022-10-13T17:27:55.890Z",
+        "updatedAt": "2022-10-13T17:27:56.782Z",
+        "publishedAt": "2022-10-13T17:27:56.780Z"
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "name": "POÄNG",
+        "category": "chairs",
+        "subcategory": "children's-chair",
+        "price": 399,
+        "description": "Children feel special and important when they can do what adults do. Therefore, we have created a smaller version of our beloved POÄNG armchair. Now you can sit and relax together - side by side.",
+        "count": 17,
+        "slug": "poang",
+        "createdAt": "2022-10-13T17:29:38.507Z",
+        "updatedAt": "2022-10-13T17:29:39.683Z",
+        "publishedAt": "2022-10-13T17:29:39.680Z"
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "name": "JANINGE",
+        "category": "chairs",
+        "subcategory": "cafe-chair",
+        "price": 1195,
+        "description": "When our designers were challenged to combine design, function and quality in a single chair, they created JANINGE. Durable enough to be used in a restaurant - with a design you'll be happy to take home.",
+        "count": 15,
+        "slug": "janinge",
+        "createdAt": "2022-10-13T17:31:50.737Z",
+        "updatedAt": "2022-10-13T17:31:53.777Z",
+        "publishedAt": "2022-10-13T17:31:53.775Z"
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "name": "NORRARYD",
+        "category": "chairs",
+        "subcategory": "cafe-chair",
+        "price": 1195,
+        "description": "Inspired by our Scandinavian design heritage with simple materials and expressions. The chair has been tested and approved for public environments - so you can be sure that it can handle all the demands of family life at home.",
+        "count": 34,
+        "slug": "norraryd",
+        "createdAt": "2022-10-13T17:33:23.565Z",
+        "updatedAt": "2022-10-13T17:33:24.426Z",
+        "publishedAt": "2022-10-13T17:33:24.424Z"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 12 }
+  }
+}

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { FiMenu } from 'react-icons/fi'
 import { FcLikePlaceholder } from 'react-icons/fc'
 import { GiBasket } from 'react-icons/gi'
-import logoImg from '../../image/ikea-logo.svg'
+import logoImg from '../../images/ikea-logo.svg'
 
 import { ICON_SIZE } from '../../utils/constants'
 
