@@ -7,14 +7,19 @@ import { TiShoppingCart } from 'react-icons/ti'
 import { FaRegHeart } from 'react-icons/fa'
 
 import { capitalizeFirstLetter, fromImageToUrl } from '../../utils/utils'
-import { ICON_SIZE, API_URL } from '../../utils/constants'
+import {
+  ICON_SIZE,
+  API_URL,
+  CATEGORIES_URL,
+  PRODUCT_URL,
+} from '../../utils/constants'
 
-
-const ProductDetails = ({product}) => {
+const ProductDetails = ({ product }) => {
   const router = useRouter()
   const productId = router.query.slug
 
-  const {category, count, description, name, price, slug, subcategory, img} =  product.data[0].attributes
+  const { category, count, description, name, price, slug, subcategory, img } =
+    product.data[0].attributes
 
   return (
     <Fragment>
@@ -27,8 +32,6 @@ const ProductDetails = ({product}) => {
           )} product`}
         />
       </Head>
-      <h1>This is product details {capitalizeFirstLetter(productId)}</h1>
-
       <div className="container">
         <div className="breadcrumb">
           <nav
@@ -38,7 +41,7 @@ const ProductDetails = ({product}) => {
           >
             <ul className="breadcrumb__list">
               <li className="breadcrumb__list-item">
-                <Link href={`/categories/${category}`}>
+                <Link href={`${CATEGORIES_URL}/${category}`}>
                   <a className="breadcrumb__link">
                     <span>{category}</span>
                   </a>
@@ -46,7 +49,7 @@ const ProductDetails = ({product}) => {
               </li>
 
               <li className="breadcrumb__list-item">
-                <Link href={`/product/${name}`}>
+                <Link href={`${PRODUCT_URL}/${name}`}>
                   <a className="breadcrumb__link">
                     <span>{name}</span>
                   </a>
@@ -55,7 +58,6 @@ const ProductDetails = ({product}) => {
             </ul>
           </nav>
         </div>
-
         <div className="good wrapper">
           <div className="good-images">
             <div className="good-image__item">
@@ -74,9 +76,7 @@ const ProductDetails = ({product}) => {
                 <p className="good-item__description">{description}</p>
               </div>
               <p className="good-item__price" style={{ width: '20%' }}>
-                <span className="good-item__count">
-                  left: {count} pcs
-                </span>
+                <span className="good-item__count">left: {count} pcs</span>
                 <span className="good-item__price-value">{price}</span>
                 <span className="good-item__currency"> SEK</span>
               </p>
@@ -131,15 +131,17 @@ const ProductDetails = ({product}) => {
 // }
 
 export async function getServerSideProps(context) {
-  const {slug} = context.params
+  const { slug } = context.params
 
   // Fetch data from API
-  const product_res = await fetch(`${API_URL}/api/products/?filters[slug][$eq]=${slug}&&populate=*`)
+  const product_res = await fetch(
+    `${API_URL}/api/products/?filters[slug][$eq]=${slug}&&populate=*`,
+  )
   const product = await product_res.json()
 
   return {
     props: {
-      product
+      product,
     },
   }
 }

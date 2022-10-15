@@ -3,7 +3,12 @@ import Link from 'next/link'
 import { v4 as uuidv4 } from 'uuid'
 
 import products from '../../products.json'
-import { ABOUT_US, CONTACT_US } from '../../utils/constants'
+import {
+  ABOUT_US,
+  CONTACT_US,
+  CATEGORIES_URL,
+  DUMMY_DATA_URL,
+} from '../../utils/constants'
 import { capitalizeFirstLetter } from '../../utils/utils'
 
 const Footer = () => {
@@ -33,8 +38,7 @@ const Footer = () => {
                 {uniqueCategories &&
                   uniqueCategories.map((category) => (
                     <li className="footer-list" key={uuidv4()}>
-                      {/* TODO: replace to categories/category*/}
-                      <Link href={`/categories/${category}`}>
+                      <Link href={`${CATEGORIES_URL}/${category}`}>
                         {capitalizeFirstLetter(category)}
                       </Link>
                     </li>
@@ -47,7 +51,7 @@ const Footer = () => {
               <ul>
                 {ABOUT_US.map((item) => (
                   <li className="footer-list" key={item.id}>
-                    <Link href={`/dummy-data/${item.title}`}>
+                    <Link href={`${DUMMY_DATA_URL}/${item.title}`}>
                       {capitalizeFirstLetter(item.title)}
                     </Link>
                   </li>
@@ -59,7 +63,7 @@ const Footer = () => {
               <ul>
                 {CONTACT_US.map((item) => (
                   <li className="footer-list" key={item.id}>
-                    <Link href={`/dummy-data/${item.title}`}>
+                    <Link href={`${DUMMY_DATA_URL}/${item.title}`}>
                       {capitalizeFirstLetter(item.title)}
                     </Link>
                   </li>

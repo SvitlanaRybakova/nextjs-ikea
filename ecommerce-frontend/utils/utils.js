@@ -1,4 +1,4 @@
-import { ABSOLUTE_PATH_NO_IMAGE, API_URL } from './constants';
+import { ABSOLUTE_PATH_NO_IMAGE, API_URL } from './constants'
 
 export const capitalizeFirstLetter = (string) => {
   return string?.charAt(0).toUpperCase() + string?.slice(1).replace(/-/g, ' ')
