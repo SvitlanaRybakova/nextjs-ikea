@@ -43,7 +43,7 @@ export default function Navbar() {
             />
           </form>
           {/*  TODO: redirect to wishList*/}
-          <button href="goods.html?cat=wishlist" className="btn btn-wishlist">
+          <button  className="btn btn-wishlist">
             <FcLikePlaceholder size={ICON_SIZE} className="pointer" />
           </button>
           {/*  TODO: redirect to cart*/}

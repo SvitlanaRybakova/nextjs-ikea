@@ -1,7 +1,10 @@
 import { v4 as uuidv4 } from 'uuid'
 
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
 export const ICON_SIZE = 20
 export const PARAGRAPH_IN_COLUMN = 3
+export const ABSOLUTE_PATH_NO_IMAGE =
+  "'https://www.freeiconspng.com/uploads/no-image-icon-15.png'"
 
 export const ABOUT_US = [
   {

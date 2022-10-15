@@ -6,7 +6,8 @@ import Image from 'next/image'
 import { fromImageToUrl, capitalizeFirstLetter } from '../../utils/utils'
 
 const ProductCard = ({ attributes }) => {
-  console.log('product card attributes', attributes)
+  if (!attributes) return
+
   return (
     <Fragment>
       <li className="goods-list__item">
@@ -16,7 +17,7 @@ const ProductCard = ({ attributes }) => {
             <article className="goods-item">
               <div className="goods-item__img">
                 <img
-                  src={fromImageToUrl(attributes?.image)}
+                  src={fromImageToUrl(attributes?.img.data?.attributes)}
                   alt={attributes?.name}
                 />
               </div>
