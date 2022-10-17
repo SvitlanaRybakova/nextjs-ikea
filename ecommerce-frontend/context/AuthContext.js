@@ -41,9 +41,24 @@ export const AuthProvider = (props) => {
       if (isLoggedIn) {
         const { email } = await magic.user.getMetadata()
         setUser({ email })
+
+        // TODO: DELETE, Just for testting
+        const token = await getToken()
+        console.log('magic token from AuthContext ', token)
       }
     } catch (err) {
       console.warn('User is not loggin anymore', err)
+    }
+  }
+
+  // Retrieves the Magic Issues Bearer Token
+  // This allows user to make authenticated request
+  const getToken = async () => {
+    try {
+      const token = await magic.user.getIdToken()
+      return token
+    } catch (err) {
+      console.war("can't retrieve magic bearer token", err)
     }
   }
 
@@ -58,6 +73,7 @@ export const AuthProvider = (props) => {
     user,
     logoutUser,
     loginUser,
+    getToken,
   }
   return (
     <AuthContext.Provider value={values}>{props.children}</AuthContext.Provider>

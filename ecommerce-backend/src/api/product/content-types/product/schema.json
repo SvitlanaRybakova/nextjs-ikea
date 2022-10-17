@@ -27,12 +27,7 @@
       "type": "text"
     },
     "img": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+      "allowedTypes": ["images", "files", "videos", "audios"],
       "type": "media",
       "multiple": false
     },
@@ -42,6 +37,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "product"
     }
   }
 }

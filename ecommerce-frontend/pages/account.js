@@ -1,12 +1,44 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { HOME_URL } from '../utils/constants'
+import { HOME_URL, API_URL } from '../utils/constants'
 import AuthContext from '../context/AuthContext'
 
+const useOrders = (user, getToken) => {
+    const [orders, setOrders] = useState([])
+
+    useEffect(() => {
+        const fetchOrders = async () => {
+            if (user) {
+                try {
+                    const token = await getToken()
+                    const order_res = await fetch(`${API_URL}/api/orders`
+                    //     , {
+                    //     headers: {
+                    //         Authorization: `Bearer ${token}`,
+                    //     },
+                    // }
+                    )
+                    const data = await order_res.json()
+                    setOrders(data)
+                } catch (err) {
+                    setOrders([])
+                }
+            }
+        }
+        fetchOrders()
+    }, [user])
+
+    return orders
+}
+
+
 const Account = () => {
-  const { user, logoutUser } = useContext(AuthContext)
+  const { user, logoutUser, getToken } = useContext(AuthContext)
+
+    const orders = useOrders(user, getToken)
+    console.log("Account. render orders", orders)
 
   if (!user) {
     return (
