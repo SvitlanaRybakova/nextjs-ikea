@@ -35,40 +35,15 @@ const Category = ({ products }) => {
     </Fragment>
   )
 }
-// export const getStaticPath = async () => {
-//   const product_res = await fetch(`${API_URL}/api/products/`)
-//   const products = await product_res.json()
-//
-//   return {
-//     fallback: true,
-//     paths: products.data.map((product) => ({
-//       params: {category: product.id}
-//     }))
-//   }
-// }
-//
-// export const getStaticProps = async () => {
-//   // Fetch the products
-//   const product_res = await fetch(`${API_URL}/api/products/`)
-//   const products = await product_res.json()
-//
-//   // Return the products as props
-//   return {
-//     props: {
-//       products,
-//     },
-//   }
-// }
 
 export async function getServerSideProps(context) {
   const req = context.req
   const res = context.res
   const { category } = context.params
+  const url = `http://localhost:1337/api/products/?filters[category][$eq]=${category}&&populate=*`
 
   // Fetch data from API
-  const product_res = await fetch(
-    `${API_URL}/api/products/?filters[category][$eq]=${category}&&populate=*`,
-  )
+  const product_res = await fetch(url)
   const products = await product_res.json()
 
   return {

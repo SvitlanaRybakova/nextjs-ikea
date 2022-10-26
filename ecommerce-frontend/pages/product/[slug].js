@@ -14,7 +14,7 @@ import {
   PRODUCT_URL,
 } from '../../utils/constants'
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product, errorCode }) => {
   const router = useRouter()
   const productId = router.query.slug
 
@@ -105,45 +105,37 @@ const ProductDetails = ({ product }) => {
   )
 }
 
-// export const getStaticProps = async({params: {slug}}) => {
-//   const product_res = await fetch(`${API_URL}/api/products/?slug=${slug}`)
-//   const found_product = await product_res.json()
-//
-//   return {
-//     props: {
-//       product : found
-//     }
-//   }
-// }
-// export const getStaticPath = async () => {
-//   // Retrieve all the possible paths
-//   const product_res = await fetch(`${API_URL}/api/products/`)
-//   const products = await product_res.json()
-//
-//   // Return them to NextJS context
-//   return {
-//     // fallback: false > Tells to next.js to show a 404 if the param doesn't match
-//     fallback: false,
-//     paths: products.data((product) => ({
-//       params: { slug: String(product.attributes.slug) },
-//     })),
-//   }
-// }
 
-export async function getServerSideProps(context) {
-  const { slug } = context.params
+export const getStaticPaths = async () => {
+  // Retrieve all the possible paths
+  const product_res = await fetch(`${API_URL}/api/products`)
+  const products = await product_res.json()
 
-  // Fetch data from API
-  const product_res = await fetch(
-    `${API_URL}/api/products/?filters[slug][$eq]=${slug}&&populate=*`,
-  )
-  const product = await product_res.json()
+  const paths = products.data.map(product => {
+    return {
+      params: { slug: product.attributes.slug.toString()}
+    }
+  })
+  // Return them to NextJS context
+  return {
+    // fallback: false > Tells to next.js to show a 404 if the param doesn't match
+    fallback: false,
+   paths,
+  }
+}
+
+export const getStaticProps = async({params: {slug}}) => {
+  const product_res = await fetch(`${API_URL}/api/products/?filters[slug][$eq]=${slug}&&populate=*`)
+    const errorCode = product_res.ok ? false : product_res.statusCode
+  const found_product = await product_res.json()
 
   return {
     props: {
-      product,
-    },
+      product : found_product,
+      errorCode,
+    }
   }
 }
+
 
 export default ProductDetails
